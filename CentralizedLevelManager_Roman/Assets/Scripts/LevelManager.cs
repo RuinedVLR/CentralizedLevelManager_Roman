@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -12,5 +13,25 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnLevel1Load()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void OnLevel2Load()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void OnMainMenuLoad()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnQuitGame()
+    {
+        Application.Quit();
     }
 }
